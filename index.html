@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			margin:0;
+			padding: 0;
+			font-family: Arial;
+			background-color: #3e464c;
+			/*overflow: hidden;*/
+		}
+		.main{
+			height: 500px;
+			width: 500px;
+			background-color: #161615;
+			border-radius: 50%;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, 10%);
+			/*box-shadow: 3px 3px 15px inset black;*/
+			box-shadow: 0px 0px 10px 10px #A9A9A9;
+			border:10px solid 416585;
+		}
+		.child{
+			text-align: center;
+			color:#D6BC08;
+			font-size: 35px;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			letter-spacing: 3px;
+
+
+		}
+		#child2{
+			transform: rotate(30deg);
+
+		}
+		#child3{
+			transform: rotate(60deg);
+		}
+		#child4{
+			transform: rotate(90deg);
+		}
+		#child5{
+			transform: rotate(120deg);
+		}
+		#child6{
+			transform: rotate(150deg);
+		}
+		#child7{
+			transform: rotate(180deg);
+		}
+		#child8{
+			transform: rotate(210deg);
+		}
+		#child9{
+			transform: rotate(240deg);
+		}
+		#child10{
+			transform: rotate(270deg);
+		}
+		#child11{
+			transform: rotate(300deg);
+		}
+		#child12{
+			transform: rotate(330deg);
+		}
+		#img1{
+			height: 160px;
+			width: 0px;
+			position: absolute;
+			transform-origin: top;
+			top: 50%;
+			left: 50%;
+			border:1px solid #f33f3f;
+		}
+		#img2{
+			height: 180px;
+			width: 0px;
+			position: absolute;
+			transform-origin: top;
+			top: 50%;
+			left: 50%;
+			border:1px solid white;
+		}
+		#img3{
+			height: 110px;
+			width: 0px;
+			position: absolute;
+			transform-origin: top;
+			top: 50%;
+			left: 50%;
+			border:2px solid #B69F04;
+		}
+		#logo{
+			position: absolute;
+			top: 20%;
+			left: 43%;
+			font-size: 35px;
+
+		}
+		#logo i{
+			font-style: normal;
+			color: white;
+			font-weight: 600;
+		}
+		#digital{
+			position: absolute;
+			top: 30%;
+			left: 43%;
+			font-size: 25px;
+			color: white;
+		}
+		#circle{
+			height: 10px;
+			width: 10px;
+			position: absolute;
+			transform-origin: top;
+			top: 48%;
+			left: 48%;
+			border:5px solid white;
+			border-radius: 50%;
+			background-color: black;
+		}
+		.responsive{
+			text-align: center;
+			justify-content: center;
+			}
+	</style>
+</head>
+<body>
+	<div class="responsive">
+	<div class="main">
+		<!-- <img src="1.png" id="img1" style="position: absolute;height: 210px;margin-left: 200px;margin-top: 50px; transform-origin: bottom;"> -->
+		<!-- <img src="2.png" id="img3" style="position: absolute;height: 210px;margin-left: 148px;margin-top: 144px;transform-origin: bottom;"> -->
+	<!-- 	<img src="3.png" id="img2" style="position: absolute;height: 210px;top:50%; left: 50%;transform-origin: top;"> -->
+		<div id="img1">
+			
+		</div>
+		<div id="img2">
+			
+		</div>
+		<div id="img3">
+			
+		</div>
+		<div id="circle">
+			
+		</div>
+		<div id="logo">
+			<i>Clock</i>
+		</div>
+		<div id="digital">
+			
+		</div>
+		<div class="child">
+			<p>XII</p>
+		</div>
+		<div class="child" id="child2">
+			<p style="transform: rotate(330deg);">I</p>
+		</div>
+		<div class="child" id="child3">
+			<p style="transform: rotate(300deg);">II</p>
+		</div>
+		<div class="child" id="child4">
+			<p style="transform: rotate(270deg);">III</p>
+		</div>
+		<div class="child" id="child5">
+			<p style="transform: rotate(240deg);">IV</p>
+		</div>
+		<div class="child" id="child6">
+			<p style="transform: rotate(210deg);">V</p>
+		</div>
+		<div class="child" id="child7">
+			<p style="transform: rotate(180deg);">VI</p>
+		</div>
+		<div class="child" id="child8">
+			<p style="transform: rotate(150deg);">VII</p>
+		</div>
+		<div class="child" id="child9">
+			<p style="transform: rotate(120deg);">VII</p>
+		</div>
+		<div class="child" id="child10">
+			<p style="transform: rotate(90deg);">IX</p>
+		</div>
+		<div class="child" id="child11">
+			<p style="transform: rotate(60deg);">X</p>
+		</div>
+		<div class="child" id="child12">
+			<p style="transform: rotate(30deg);">XI</p>
+		</div>
+	</div>
+</div>
+<script>
+	// var cricle =  document.querySelector('.main');
+	// cricle.style.backgroundColor = 'red';
+	// cricle.style.height = '100px';
+	// cricle.style.width = '100px';
+	function fun(){
+	var d = new Date();
+	var h = d.getHours();
+	var m = d.getMinutes();
+	var s = d.getSeconds();
+// FOR SECONDS
+	var s1 = s*6 + 180;
+	var x = document.getElementById('img1');
+	x.style.transform = 'rotate(' + s1 + 'deg)'; 
+// for minuts
+	var a = s/60;
+	var m1 = (m+a)*6 + 180;
+	var y = document.getElementById('img2');
+	y.style.transform = 'rotate(' + m1 + 'deg)';
+//  for hours
+	var b = m/60;
+	var h1 = (h+b)*30 + 180;
+	var z = document.getElementById('img3');
+	z.style.transform = 'rotate(' + h1 + 'deg)';
+
+	// for digital watch
+	m = checkTime(m);
+	s = checkTime(s);
+	document.getElementById('digital').innerHTML = h + ":" + m + ":" + s;
+}
+setInterval(fun, 1000);
+
+function checkTime(i){
+	if(i < 10){
+		i = '0' + i;
+	}
+	return i;
+}
+</script>
+
+</body>
+</html>
